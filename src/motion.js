@@ -38,7 +38,7 @@
         
     };
 
-    lib.createMotion = function(config) {
+    lib.motion = function(config) {
         return new Motion(config);
     }
 
