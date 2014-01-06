@@ -33,7 +33,7 @@
                 return [[(a / 3 + (a + b) / 3 - a) / (b - a), (a * a / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)],
                     [(b / 3 + (a + b) / 3 - a) / (b - a), (b * b / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)]];
             }
-            return quadratic2cubicBezier( this.v / this.a , -this.t + this.v / this.a );
+            return quadratic2cubicBezier( this.v / this.a , this.t + this.v / this.a );
         }
         
     };
