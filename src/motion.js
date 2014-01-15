@@ -6,17 +6,6 @@
         this.v = config.v || 0;
         this.a = config.a || 0;
         
-        // if(!("v" in config)) {
-        //     this.v = 0;
-        // } else {
-        //     this.v = config.v;
-        // }
-        // if(!("a" in config)) {
-        //     this.a = 0;
-        // } else {
-        //     this.a = config.a;
-        // }
-        
         if(typeof config.t !== 'undefined') {
             this.t = config.t;
         }
@@ -29,26 +18,15 @@
             if (typeof this.s === 'undefined') {
                 this.t = - this.v / this.a;
             } else {
-                this.t = Math.sqrt((this.v * this.v + 2 * this.a * this.s ) / (this.a * this.a)) - this.v / this.a;
+                var t1 = (Math.sqrt(this.v * this.v + 2 * this.a * this.s) - this.v) / this.a;
+                var t2 = (-Math.sqrt(this.v * this.v + 2 * this.a * this.s) - this.v) / this.a;
+                this.t = Math.min(t1, t2);
             }
         }
 
         if (typeof this.s === 'undefined') {
             this.s = this.a * this.t * this.t / 2 + this.v * this.t;
         }
-
-
-        // else if(("s" in config)) {
-        //     this.t = Math.sqrt((this.v * this.v + 2 * this.a * this.s ) / (this.a * this.a)) - this.v / this.a;
-        // } else if( this.v / this.a  < 0) {
-        //     this.t = - this.v / this.a;
-        // }
-        
-        // if("s" in config) {
-        //     this.s = config.s;
-        // } else {
-        //     this.s = this.a * this.t * this.t / 2 + this.v * this.t;
-        // }
         
         this.generateCubicBezier = function() {
             function quadratic2cubicBezier(a, b) {
