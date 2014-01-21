@@ -1,6 +1,18 @@
 ;
 (function(win, lib) {
 
+    /**
+     * 二次贝塞尔曲线(即抛物线)转换为三次贝塞尔曲线
+     * 
+     * @param  {number} a p1 点的横坐标
+     * @param  {number} b p1 点的纵坐标
+     * @return {Array}    4 个三次贝塞尔参数组成的数组，形如[[p1x, p1y], [p2x, p2y]]
+     */
+    function quadratic2cubicBezier(a, b) {
+        return [[(a / 3 + (a + b) / 3 - a) / (b - a), (a * a / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)],
+            [(b / 3 + (a + b) / 3 - a) / (b - a), (b * b / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)]];
+    }
+
     function Motion(config){
 
         this.v = config.v || 0;
@@ -29,10 +41,6 @@
         }
         
         this.generateCubicBezier = function() {
-            function quadratic2cubicBezier(a, b) {
-                return [[(a / 3 + (a + b) / 3 - a) / (b - a), (a * a / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)],
-                    [(b / 3 + (a + b) / 3 - a) / (b - a), (b * b / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)]];
-            }
             return quadratic2cubicBezier( this.v / this.a , this.t + this.v / this.a );
         }
         
