@@ -1,7 +1,7 @@
 {
   "name": "lib.motion",
   "description": "运动轨迹",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-motion",
   "author": {
     "name": "hanquan.csf",
