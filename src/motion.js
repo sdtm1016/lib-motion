@@ -60,8 +60,6 @@
         return quadratic2cubicBezier( this.v / this.a , this.t + this.v / this.a );
     };
 
-    lib.motion = function(config) {
-        return new Motion(config);
-    }
+    lib.motion = Motion;
 
 })(window, window['lib'] || (window['lib'] = {}));

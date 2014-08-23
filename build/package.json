@@ -1,41 +1,39 @@
 {
-    "name": "lib.motion",
-    "description": "motion",
-    "version": "1.0.1",
-    "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-motion",
-    "author": {
-        "name": "hanquan.csf",
-        "email": "hanquan.csf@taobao.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@gitlab.alibaba-inc.com:mtb/lib-motion.git"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "/blob/master/LICENSE-MIT"
-        }
-    ],
-    "engines": {
-        "node": ">= 0.8.0"
-    },
-    "devDependencies": {
-        "grunt": "~0.4.1",
-        "grunt-depconcat": "~0.2.0",
-        "grunt-depcombo": "~0.1.0",
-        "grunt-contrib-copy": "~0.4.1",
-        
-        "grunt-contrib-uglify": "~0.2.0",
-        "grunt-contrib-watch": "~0.4.0",
-        "grunt-contrib-clean": "~0.5.0"
-    },
-    "dependencies": {},
-    "combo": {
-        
-    },
-    "keywords": [
-        "lib",
-        "motion"
-    ]
+  "name": "lib.motion",
+  "description": "运动轨迹",
+  "version": "1.0.2",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-motion",
+  "author": {
+    "name": "hanquan.csf",
+    "email": "hanquan.csf@taobao.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/lib-motion.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-depconcat": "~0.2.0",
+    "grunt-depcombo": "~0.1.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-cmdwrap": "~0.1.0"
+  },
+  "dependencies": {},
+  "combo": {},
+  "keywords": [
+    "lib",
+    "motion"
+  ]
 }
